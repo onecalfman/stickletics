@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickletics - Train Smart with Simplicity</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        /* Custom gradient background for sections - now includes a subtle green */
+        .gradient-bg {
+            background: linear-gradient(180deg, #A5D6A7 0%, #E7DBB9 100%); /* Soft green to main beige */
+        }
+        .hero-section {
+            /* Background image updated with the provided Google Photos URL */
+            background-image: url('https://lh3.googleusercontent.com/pw/AP1GczMw0_MavyGcFdo_G03AWVLPAJ3COdKdbSbAEFVwrA-8ETGc4ntOjTmG7pMT4Spugp3hMNY7Tzf-rNvy-tE3ha_qHJSqqdoc9DI9yb5OQJsa5Y2FQyS-2AhX37KgvXYp_AkqrQu6IvqQ4jX1-QEcYgzI=w2104-h1406-s-no-gm?authuser=0');
+            background-size: cover;
+            background-position: center;
+            height: 80vh; /* Adjust height for visual appeal */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .play-button {
+            background-color: white;
+            border-radius: 9999px; /* Fully rounded */
+            width: 80px; /* Large size */
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+        .play-button:hover {
+            transform: scale(1.05);
+        }
+        .play-button svg {
+            fill: #6B4F4F; /* Play button color - warm dark brown */
+            width: 30px;
+            height: 30px;
+            margin-left: 5px; /* Adjust for triangular shape */
+        }
+        /* Custom styles for circular video thumbnails/iframes */
+        .circular-video-container {
+            width: 160px; /* Slightly larger to accommodate padding/border */
+            height: 160px;
+            border-radius: 9999px; /* Make it circular */
+            overflow: hidden; /* Clip content to circle */
+            position: relative;
+            margin-bottom: 1rem; /* Spacing below the circle */
+            flex-shrink: 0; /* Prevent shrinking on smaller screens */
+            display: flex; /* For centering content inside */
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0; /* Fallback background */
+        }
+
+        .circular-video-container iframe,
+        .circular-video-container img {
+            position: absolute; /* Take up full space of container */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure image/video covers the circle */
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="absolute top-0 left-0 w-full z-10 p-4">
+        <nav class="flex items-center justify-between max-w-7xl mx-auto px-4">
+            <div class="flex items-center">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPAcrH4tHXcDu0whDX_7V0npaVrZffhXzVJrMKlorWg08YAathTU_TU_J89Ns6tU2B1blrhECQtDX3BTtCZjASzcuasxPG6oN2VP_pvRaQyttHSzMK1WEzlscyROy4tgQ6JbBKNkZ-12XXB9qULx69S=w1406-h1406-s-no-gm?authuser=0" alt="Stickletics Logo" class="w-10 h-10 rounded-full mr-2 object-cover">
+                <span class="text-white text-lg font-bold uppercase tracking-wider hidden sm:block">Stickletics</span>
+            </div>
+            <div class="text-white text-sm font-medium tracking-wide">
+                <span class="block">RAMIN</span>
+                <span class="block">WARAGHAI</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white relative">
+        <div class="hero-overlay"></div>
+        <div class="relative z-10 px-4">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-4">TRAIN SMART WITH SIMPLICITY</h1>
+            <p class="text-lg sm:text-xl md:text-2xl font-light">Mobility - Stability - Integration for Better Movement</p>
+        </div>
+    </section>
+
+    <!-- What is Stickletics? Section -->
+    <section class="gradient-bg py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-4xl font-bold text-[#333333] mb-6">What is <br class="hidden sm:inline">Stickletics?</h2> <!-- Heading color -->
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">"A sequence of stretches, activations, and total body exercises using a simple training stick."</p>
+                <p class="text-md text-gray-600 leading-relaxed">Developed by sports scientist Ramin Waraghai, Stickletics combines stretching, strength, and stability work into a unique, science-based fitness experience.</p>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center items-center">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczOpuP-9nn04UKMLjNqS2TcxunwwFv4cUhD3iqMdo2Vi8IApqRxgqAeNdL5gA74ntrBzCArE-hYGl2UN5sAxM0vPTRJClEAkt26sehT_Bypbozim76KAqxftlzosZ3Q3bF0lKHzntiWPR4j38kSgxOXZ=w2106-h1406-s-no-gm?authuser=0" alt="Stickletics Concept Image" class="rounded-xl shadow-lg w-full max-w-md md:max-w-none h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-4xl font-bold text-[#333333] mb-8">How It Works</h2> <!-- Heading color -->
+                <p class="text-xl text-gray-700 mb-6">Use stick to:</p>
+                <div class="space-y-6">
+                    <div class="bg-[#F8F5EE] p-6 rounded-lg shadow-md flex items-start space-x-4"> <!-- Background color -->
+                        <span class="text-2xl font-bold text-[#6B4F4F]">01</span> <!-- Number color - warm dark brown -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-[#333333]">Regain mobility</h3> <!-- Heading color -->
+                            <p class="text-gray-700">Restore natural range of motion with guided stick-based stretches.</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#F8F5EE] p-6 rounded-lg shadow-md flex items-start space-x-4"> <!-- Background color -->
+                        <span class="text-2xl font-bold text-[#6B4F4F]">02</span> <!-- Number color - warm dark brown -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-[#333333]">Improve stability</h3> <!-- Heading color -->
+                            <p class="text-gray-700">Build control and balance through focused, supported movements.</p>
+                        </div>
+                    </div>
+                    <div class="bg-[#F8F5EE] p-6 rounded-lg shadow-md flex items-start space-x-4"> <!-- Background color -->
+                        <span class="text-2xl font-bold text-[#6B4F4F]">03</span> <!-- Number color - warm dark brown -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-[#333333]">Integrate movement</h3> <!-- Heading color -->
+                            <p class="text-gray-700">Connect muscles and joints in full-body exercises for lasting performance and joint health.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center items-center">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczNnfrkfLZ-dcnHdeBD7eue61AQi6QcT01ZKCsbztREhgU7FkVbjQKHjReiaXwjiQCsluqX4Zgl1e9M1sLxUMIpH_pgpACYrprDs7Kk4q82kx6AsVQLv8AZyVNtPdvxxGe7PKg8zur9f1jbSWVlzfC6F=w938-h1406-s-no-gm?authuser=0" alt="How It Works Example" class="rounded-xl shadow-lg w-full max-w-md md:max-w-none h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery/Examples -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 gradient-bg">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-[#333333] mb-12">See Stickletics in Action</h2> <!-- Heading color -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Image for Action 1 updated -->
+                <div class="rounded-xl overflow-hidden shadow-lg aspect-w-1 aspect-h-1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMefO0yFjEGoOvMSFz7Rj_9kUMKvB7iyLt50W4DGVdwdrghCrMp2vuHUIGL-yMnfRffWWESmt-Od5xSI7IDigltnor5ju4LD0pIKni5UgAw1FIEapXLxAgWCPMVoJqHcmD3eUcO9KAnjX_aO2MdXoPS=w940-h1406-s-no-gm?authuser=0" alt="Stickletics Action 1" class="w-full h-full object-cover">
+                </div>
+                <!-- Image for Action 2 updated -->
+                <div class="rounded-xl overflow-hidden shadow-lg aspect-w-1 aspect-h-1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMO-OF7kbA_-TaOfrsWv1I2oPdf_oTC6CTloc085k6NuLcNy28o0Zmx5hCbaaGTjeEafGUCBHqNI-Un4x9jdTPAFvFEBsVITfoEFzsD7EUBR2_AR8bR78_DdHOQaWkDrQvxKhdTJjuGSVt1Sg4F1uKS=w940-h1406-s-no-gm?authuser=0" alt="Stickletics Action 2" class="w-full h-full object-cover">
+                </div>
+                <!-- Image for Action 3 updated -->
+                <div class="rounded-xl overflow-hidden shadow-lg aspect-w-1 aspect-h-1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMefO0yFjEGoOvMSFz7Rj_9kUMKvB7iyLt50W4DGVdwdrghCrMp2vuHUIGL-yMnfRffWWESmt-Od5xSI7IDigltnor5ju4LD0pIKni5UgAw1FIEapXLxAgWCPMVoJqHcmD3eUcO9KAnjX_aO2MdXoPS=w940-h1406-s-no-gm?authuser=0" alt="Stickletics Action 3" class="w-full h-full object-cover">
+                </div>
+                <!-- Image for Action 4 updated -->
+                <div class="rounded-xl overflow-hidden shadow-lg aspect-w-1 aspect-h-1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPXYSBGT38ZcXE8YXfPhbhUr80Rks8Vbz-8JLmhHTUqDcgUQMUy8o21a67yIo7yU7iho2SG4-OITjdvNdffw5u6zUXs8MCG6G7v1lIvRsy0TGybadMRsd7VIqsg79cUEQNK5Hy6TUEf4WOBF0s3SQN8=w940-h1406-s-no-gm?authuser=0" alt="Stickletics Action 4" class="w-full h-full object-cover">
+                </div>
+                <!-- Image for Action 5 updated -->
+                <div class="rounded-xl overflow-hidden shadow-lg aspect-w-1 aspect-h-1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczO6y9VKl7UkXJdtJP_UGZ78V8908W-T9ShtSEipX88B72os6VLQsvm7EeMD6sVhco81rzhnJ1reKG07PL0o7EvHPuhzUETz4P2qtwUu7D5YYntbHc4UsM3ZxSyRLTYBTL4O3TuWPrmTJGWxZMmWdcki=w940-h1406-s-no-gm?authuser=0" alt="Stickletics Action 5" class="w-full h-full object-cover">
+                </div>
+                <!-- Image for Action 6 updated -->
+                <div class="rounded-xl overflow-hidden shadow-lg aspect-w-1 aspect-h-1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNYfX4Svd7Ok075Wrpx_3snzIWU_Q2uEsO5fFeDS_lVg5WaRzqL5mK-_25H64XvoEQrS6iEnBLwoCyE3MptIutdPIOg1kRI14mK2Yr5aU_f7BbgaxEndYJP-UMeCzS5xU8iRmp4BikzX7HAz1hI8Oxq=w940-h1406-s-no-gm?authuser=0" alt="Stickletics Action 6" class="w-full h-full object-cover">
+                </div>
+                <!-- Image for Action 7 updated -->
+                <div class="rounded-xl overflow-hidden shadow-lg aspect-w-1 aspect-h-1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMq_NZwQj0xN5SUyMSCd42tBCNk2FV_FkazN9lbzp5LXdZ0DRF4I-GeV0KXfg6XdMAA2ICjBaXT4mYEdSD8dwyEQOTzypn5_ulOFAGOpNi4xThRsQgGmTuP1sjJgz7GHcpFxshGTGR729YuO9NPYDBy=w648-h1406-s-no-gm?authuser=0" alt="Stickletics Action 7" class="w-full h-full object-cover">
+                </div>
+                <!-- Image for Action 8 updated (was previously placeholder, now image from "Action 9" input) -->
+                <div class="rounded-xl overflow-hidden shadow-lg aspect-w-1 aspect-h-1">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNYfX4Svd7Ok075Wrpx_3snzIWU_Q2uEsO5fFeDS_lVg5WaRzqL5mK-_25H64XvoEQrS6iEnBLwoCyE3MptIutdPIOg1kRI14mK2Yr5aU_f7BbgaxEndYJP-UMeCzS5xU8iRmp4BikzX7HAz1hI8Oxq=w940-h1406-s-no-gm?authuser=0" alt="Stickletics Action 8" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stickletics is ideal for... Section -->
+    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center text-[#333333] mb-12">Stickletics is ideal for...</h2> <!-- Heading color -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: Fitness Enthusiasts - Image Instead of Video -->
+                <div class="bg-[#F8F5EE] p-6 rounded-xl shadow-lg text-center flex flex-col items-center">
+                    <div class="circular-video-container">
+                        <img
+                            src="https://lh3.googleusercontent.com/pw/AP1GczMcpGIwhpxWJ8ryGmHvv8nl_q81Pun_770nIN6LO7uYJBIknmxj2yVMJM0_oF5KKc-0Jox4DB3r4Jm92aR-5lNdpYdhFdCmVeKScoA1uI9Pigc_ZA93-fRVta--UDTCe9lMcoZUfX6UvzackiXrojX_=w2110-h1406-s-no-gm?authuser=0"
+                            alt="Fitness Enthusiasts Image"
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#333333] mb-2">FITNESS ENTHUSIASTS</h3>
+                    <p class="text-gray-700">Restore natural range of motion with guided stick-based stretches.</p>
+                </div>
+                <!-- Card 2: Athletes - Image from provided link -->
+                <div class="bg-[#F8F5EE] p-6 rounded-xl shadow-lg text-center flex flex-col items-center">
+                    <div class="circular-video-container">
+                        <img
+                            src="https://lh3.googleusercontent.com/pw/AP1GczMhjRM9aJhAh2K-SfAbojLz7aycKPuLcymSCZqt985lvFqMf8UKAUMGCdBHEk9PQpN5cDHuacLZoaqairS0KNFejKTIzc0EOxEFegY_4UWPwjWkW-npMl8tZEyX6aJHAxr5u70vvahxZ8_TsEpgxsfN=w2106-h1406-s-no-gm?authuser=0"
+                            alt="Athletes Image"
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#333333] mb-2">ATHLETES</h3>
+                    <p class="text-gray-700">Build control and balance through focused, supported movements.</p>
+                </div>
+                <!-- Card 3: Rehabilitation & Therapy - Image from provided link -->
+                <div class="bg-[#F8F5EE] p-6 rounded-xl shadow-lg text-center flex flex-col items-center">
+                    <div class="circular-video-container">
+                        <img
+                            src="https://lh3.googleusercontent.com/pw/AP1GczNlX5ZG5H3-onFdf0NKpoajdHQDycu4HxLD_yqEESdDl5Y70C2ssbSiKDtRk4jsz75CLwERDQMl_lAfoh75Wi_PiYlRGDrtaa0kdx02ewSmGCzZcIttYwXkJkjo73xg4pwZrScuOxNE2kbqpJ6sxRwS=w2108-h1406-s-no-gm?authuser=0"
+                            alt="Rehabilitation & Therapy Image"
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#333333] mb-2">REHABILITATION & THERAPY</h3>
+                    <p class="text-gray-700">Connect muscles and joints in full-body exercises for lasting performance and joint health.</p>
+                </div>
+                <!-- Card 4: Anyone Looking to Move Better & Feel Stronger - Image from provided link -->
+                <div class="bg-[#F8F5EE] p-6 rounded-xl shadow-lg text-center flex flex-col items-center">
+                    <div class="circular-video-container">
+                        <img
+                            src="https://lh3.googleusercontent.com/pw/AP1GczOaJjLCtr2QXWUvZRKXT6a4U0vnALO_i1tb9h7AfgfEJUSgCj6vpt3dMEl3Trd3BLHeOQnWiCTo2RoakO6GtPRe89Mn47-7ynd1bp2KUgWgTqLe8pXt7G0y7b6pDBz4psTCi8o5o-u9tQxy_68c5MDE=w2508-h1406-s-no-gm?authuser=0"
+                            alt="Move Better Feel Stronger Image"
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#333333] mb-2">ANYONE LOOKING TO MOVE BETTER & FEEL STRONGER</h3>
+                    <p class="text-gray-700">Connect muscles and joints in full-body exercises for lasting performance and joint health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Use a Stick? Section -->
+    <section class="gradient-bg py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-[#333333] mb-12">Why Use a Stick?</h2> <!-- Heading color -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold text-[#333333] mb-2">Supports your balance</h3> <!-- Heading color -->
+                        <p class="text-gray-700">Adds stability during challenging poses and movements.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold text-[#333333] mb-2">Activates your shoulders and core</h3> <!-- Heading color -->
+                        <p class="text-gray-700">Engages key muscle groups by pressing or pulling the stick.</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold text-[#333333] mb-2">Helps you stretch deeper</h3> <!-- Heading color -->
+                        <p class="text-gray-700">Provides leverage to safely increase your range of motion.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold text-[#333333] mb-2">Guides proper form and movement control</h3> <!-- Heading color -->
+                        <p class="text-gray-700">Encourages alignment and body awareness throughout each exercise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section (main video) -->
+    <section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-[#333333] mb-12">Watch and Learn</h2> <!-- Heading color -->
+            <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl" style="padding-bottom: 56.25%;">
+                <!-- Main video placeholder. Consider replacing with an actual YouTube embed if you have a primary video. -->
+                <img src="https://placehold.co/1000x562/6B4F4F/FDF9F0?text=Main+Video+Placeholder" alt="Main Video Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
+                <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#333333] text-gray-300 py-12 px-4 sm:px-6 lg:px-8"> <!-- Footer background color - dark grey -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <!-- Footer Logo/Title -->
+            <div class="flex flex-col items-center md:items-start mb-6 md:mb-0">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPAcrH4tHXcDu0whDX_7V0npaVrZffhXzVJrMKlorWg08YAathTU_TU_J89Ns6tU2B1blrhECQtDX3BTtCZjASzcuasxPG6oN2VP_pvRaQyttHSzMK1WEzlscyROy4tgQ6JbBKNjZ-12XXB9qULx69S=w1406-h1406-s-no-gm?authuser=0" alt="Stickletics Logo" class="w-12 h-12 rounded-full mb-2 object-cover">
+                <p class="text-lg font-bold uppercase tracking-wider text-white">TRAIN SMART WITH SIMPLICITY</p>
+            </div>
+
+            <!-- Office Information -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Office</h3>
+                <address class="not-italic space-y-2">
+                    <p>Hamburg</p>
+                    <p>Tel: 063482380090</p>
+                    <p><a href="mailto:info@raminwaraghai.de" class="hover:text-white transition-colors">info@raminwaraghai.de</a></p>
+                </address>
+            </div>
+
+            <!-- Business Hours -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Business hours</h3>
+                <ul class="space-y-2">
+                    <li>Monday - Friday: 9am - 6pm</li>
+                    <li>Saturday: 9am - 12pm</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-gray-700 mt-10 pt-8 flex flex-col sm:flex-row items-center justify-between">
+            <p class="mb-4 sm:mb-0">&copy; 2025 Stickletics. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl" aria-label="Facebook">
+                    <!-- Font Awesome Facebook Icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zm-2 7h-2v2h2v3h-3v-3H9v-2h3V6.2A3.2 3.2 0 0115.2 3h2.1V7z"/></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors text-2xl" aria-label="Instagram">
+                    <!-- Font Awesome Instagram Icon -->
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.74 0 8.333.01 7.03 0S4.66.33 3.42 1.57a4.93 4.93 0 00-1.57 3.42c-.01.99-.01 1.05-.01 3.26S0 8.74 0 12s.01 3.26.01 7.03c.01 1.3.33 2.56 1.57 3.8s2.56 1.57 3.8 1.57c.99.01 1.05.01 3.26.01s3.26-.01 7.03-.01 2.56-.33 3.8-1.57c1.24-1.24 1.57-2.56 1.57-3.8s.01-1.05.01-3.26-.01-3.26-.01-7.03c-.01-1.3-.33-2.56-1.57-3.8s-2.56-1.57-3.8-1.57C15.26.01 15.2.01 12 0zm0 4.38a7.62 7.62 0 110 15.24 7.62 7.62 0 010-15.24zM12 7.18a4.82 4.82 0 100 9.64 4.82 4.82 0 000-9.64zM18.84 5a1.16 1.16 0 110 2.32 1.16 1.16 0 010-2.32z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
